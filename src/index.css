@@ -71,4 +71,7 @@ nav img {
   align-items: baseline;
   grid-area: cart;
   width: 40px;
+} 
+span {
+  color:whitesmoke;
 }

@@ -10,7 +10,7 @@ function EmptyCart () {
                 <Button as={Link} to="/" variant="primary" className="mt-3">
                     Volver a la tienda
                 </Button>
-    </div>
+            </div>
         </Container>
     )
 }

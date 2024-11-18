@@ -16,9 +16,15 @@ function CartProvider ({children}) {
 
     const removeFromCart = (id) => {setCart((prev) => prev.filter((product) => product.id !== id));
       }
+
+    const getTotal = () =>{
+        const priceOnly = cart.map (product => product.price*product.qty)
+        const total= priceOnly.reduce((acc, current) => acc + current, 0)
+        return total
+    }
     
     return (
-    <cartContext.Provider value={{cart, addToCart, clearCart, getCantidades, removeFromCart}}>
+    <cartContext.Provider value={{cart, addToCart, clearCart, getCantidades, removeFromCart, getTotal}}>
         {children}
     </cartContext.Provider>
     )

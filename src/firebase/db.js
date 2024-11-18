@@ -5,8 +5,10 @@ import {
     doc, 
     getDoc, 
     query, 
-    where } from "firebase/firestore";
+    where,
+    addDoc } from "firebase/firestore";
 import {app} from './config'
+
 
 const db = getFirestore(app);
 
@@ -44,3 +46,14 @@ export const getCategory = async (id) =>{
 
     return products
 } 
+
+
+
+  export const createOrder = async (order) =>{
+    try {
+        const docRef = await addDoc(collection(db, "orders"), order)
+        return docRef
+      } catch (e) {
+        console.error("Error adding document: ", e)
+      }
+  }

@@ -33,6 +33,7 @@ function SubmitForm({cart}) {
     }
     return(
     <Container>
+        <h3>Formulario de compra</h3>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Nombre</Form.Label>

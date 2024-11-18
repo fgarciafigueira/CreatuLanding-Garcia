@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 
 function Item({item}) {
   return (

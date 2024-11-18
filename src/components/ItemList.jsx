@@ -4,7 +4,7 @@ import Item from './Item'
 
 function ItemList ({items}){
     return (
-        <Container>
+        <Container style={{paddingTop:'1rem'}}>
             <Row xs={1} md={4} className="g-4 align-items-stretch">
               {items.map(item => ( <Item item={item} key={item.id} />
               ) ) }
